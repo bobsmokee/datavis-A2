@@ -1,8 +1,8 @@
 window.onload = () => {
   d3.csv("cars.csv").then(data => {
     data.forEach(d => {
-      d.x = +d.x;
-      d.y = +d.y;
+      d.x = +d["Horsepower(HP)"];
+      d.y = +d["Retail Price"];
     });
 
     var svg = d3.select("svg"),
